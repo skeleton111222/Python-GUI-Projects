@@ -1,0 +1,17 @@
+import tkinter as tk
+def display():
+    message=msg_entry.get()
+    print(f"Your message is: {message}")
+    display_label.config(text=f"Your message is: {message}")
+root=tk.Tk()
+root.title('Message')
+root.geometry("300x300+0+0")
+message= tk.Label(root, text="message:")
+msg_entry=tk.Entry(root)
+display_label=tk.Label(root, text="")
+button=tk.Button(root, text="press", command= display)
+message.grid(row=0, column=0)
+msg_entry.grid(row=1,column=0)
+button.grid(row=2, column=0)
+display_label.grid(row=3, column=0)
+root.mainloop()
